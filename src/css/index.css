@@ -1,0 +1,431 @@
+*{
+    box-sizing: border-box;
+}
+  @font-face {
+    font-family: 'Kerox';
+    src: url('../../fonts/Kerox.otf');
+  }  
+ 
+html,body{
+    height:780px;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: #CCC;
+    padding:0;
+    margin:0;
+}
+main{
+    width:1200px;
+    height:700px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index:0;
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+.level{
+    width:1200px;
+    height:700px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index:10;
+    font-family: 'Kerox', sans-serif;
+    padding-top:50px;
+}
+.level p{
+    display:block;
+    margin:50px auto;
+    text-align: center;
+    color: #21cbff;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 6px #21cbff;
+    animation: flicker 2s linear infinite;
+
+}
+@keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: .9;
+    }
+  
+    6% {
+      opacity: .85;
+    }
+  
+    8% {
+      opacity: .95;
+    }
+  
+    10% {
+      opacity: .90;
+    }
+  
+    11% {
+      opacity: .922;
+    }
+  
+    12% {
+      opacity: .9;
+    }
+  
+    14% {
+      opacity: .95;
+    }
+  
+    16% {
+      opacity: .98;
+    }
+  
+    17% {
+      opacity: .9;
+    }
+  
+    19% {
+      opacity: .93;
+    }
+  
+    20% {
+      opacity: .99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: .94;
+    }
+  
+    28% {
+      opacity: .98;
+    }
+  
+    37% {
+      opacity: .93;
+    }
+  
+    38% {
+      opacity: .5;
+    }
+  
+    39% {
+      opacity: .96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: .97;
+    }
+  
+    46% {
+      opacity: .94;
+    }
+  
+    56% {
+      opacity: .9;
+    }
+  
+    58% {
+      opacity: .9;
+    }
+  
+    60% {
+      opacity: .99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: .9;
+    }
+  
+    72% {
+      opacity: .95;
+    }
+  
+    93% {
+      opacity: .93;
+    }
+  
+    95% {
+      opacity: .95;
+    }
+  
+    97% {
+      opacity: .93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+.level div{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:20px 30px;
+    font-size: 30px;
+    color: #21cbff;
+    letter-spacing: 5px;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    /* animation: flicker 2s linear infinite; */
+  position: relative;
+  margin: 0 15px;
+}
+
+.levelBtns div:hover {
+  background: #21cbff;
+  color: #000;
+  box-shadow: 0 0 50px #21cbff;
+  transition-delay: 0.25s;
+}
+
+/* ボタン左上のカッコ */
+.levelBtns div::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #21cbff;
+    border-left: 2px solid #21cbff;
+    content: "";
+    transition: 0.2s;
+  }
+  
+  /* ボタン右下のカッコ */
+  .levelBtns div::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #21cbff;
+    border-bottom: 2px solid #21cbff;
+    content: "";
+    transition: 0.25s;
+  }
+  
+  /* ボタン左上のカッコがホバーで伸びる */
+  .levelBtns div:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* ボタン右下のカッコがホバーで伸びる */
+  .levelBtns div:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  /* ゲーム画面　全体レイアウト */
+  .game{
+    width:1200px;
+    height:700px;
+    position: absolute;
+    top:0px;
+    left:-1200px;
+    z-index:1;
+  }
+
+/* ゲーム画面　コンテンツレイアウト */
+.contents1{
+    height:50px;
+    width:100%;
+    margin: 0 auto;
+    line-height: 50px;
+    font-size:25px;
+    letter-spacing: 5px;;
+    color:#21cbff;
+    text-shadow: 2px 2px 6px #21cbff;
+    animation: flicker 2s linear infinite;
+    font-family: 'Kerox';
+    /*
+    background-color: orange;
+    background-image: radial-gradient(circle, orange,brown);
+    */
+    text-align: center;
+}
+
+.contents2, .contents3{
+    float:left;
+    height:600px;
+    padding-top:30px;
+}
+.contents2{
+  width:700px;
+}
+.contents3{
+  width:500px;
+}
+
+/* ポインター */
+.pointer{
+    top:286px; 
+    left: 306px;
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    line-height: 150px;
+    height:100px;
+    width:100px;
+ }
+
+/* ゲームボード */
+.gameBoard{
+    position: absolute;
+    top:80px;
+    left:100px;
+
+}
+
+.gameBoard tr td {
+    background-color:#AAA;
+    width: 100px;
+    height: 100px;
+}
+.colItem{
+    display:flex;
+    border-bottom:2px solid darkgray;
+    width:400px;
+}
+
+.light{
+    flex-direction: row;
+    width:30px;
+    height:30px;
+    border-top:7px solid darkgray;
+    border-right:7px solid darkgray;
+    border-left:7px solid darkgray;
+    border-bottom:5px solid darkgray;
+    background-color: orange;
+    background-image: radial-gradient(circle, orange,brown);
+}
+/* 文字列ターゲット */
+.colName{
+    height:30px;
+    padding-left:10px;
+    flex-direction: row;
+    padding-bottom:5px;
+    color:darkgray;
+    font-size:22px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    width:60%;
+}
+#timerLabel{
+    padding-left:10px;
+    padding-top:5px;
+    font-weight:bold;
+    font-size:40px;
+    color:darkgray;
+}
+#strTarget{
+    padding-left:10px;
+    padding-top:5px;
+    font-weight:bold;
+    font-size:50px;
+    color:darkgray;
+    letter-spacing: 2px;;
+}
+
+.colItems{
+    margin-bottom:20px;
+}
+
+.powerItems{
+    padding-top:20px;
+    padding-left:10px;
+    display:flex;
+}
+.powerItems div{
+    border-radius:50px;
+    width:60px;
+    height:60px;
+    flex-direction: row;
+    margin-right:6px;
+    border:1px solid #21cbff;
+    box-shadow: 0 0 30px #21cbff;
+}
+
+.scoreArea{
+   
+    color:#CCC;
+}
+.scoreItem{
+    float:left;
+    margin-top:5px;
+    color:#CCC;
+}
+.scoreItem1{
+    border-right:1px dotted #DDD;
+}
+.player{
+    height:30px;
+    width:120px;
+    text-align:center;
+    line-height:50px;
+    font-size:20px;
+}
+.score{
+    height:50px;
+    width:120px;
+    text-align:center;
+    line-height:70px;
+    font-size:40px;
+    
+}
+
+.resultArea{
+    height:50px;
+    width:100%;
+    position:absolute;
+    top:650px;
+    font-size:27px;
+}
+.resultItem{
+    margin:0 auto;
+    width:70%;
+    height:50px;
+    font-family:'Kerox';
+    color:darkorange;
+    background-color: transparent;
+    transition: all 0.7s;
+    text-align: center;
+    line-height: 50px;
+}
+.resultItem:hover{
+  background-image: radial-gradient(circle, darkorange,transparent);
+  color:#222;
+}
+
+footer{
+    height:80px;
+    padding:20px 0px;
+    z-index: 10;
+    position: absolute;
+    top:700px;
+    left:0px;
+    width:1200px;
+}
+footer div{
+    margin:0 auto;
+    text-align: center;
+}

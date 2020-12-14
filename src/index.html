@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Splite</title>
+</head>
+<body>
+    <main>
+    <!-- レベル選択画面 -->
+    <div class="level">
+        <p>Select Level</p>
+        <!-- レベルボタンエリア -->
+        <div class ="levelBtns">
+            <div id ="level1Btn">Level1</div>
+            <div id="level2Btn">Level2</div>
+            <div id="levelBtn3">Level3</div>
+        </div>
+    </div>
+    <!-- ゲーム画面 -->
+    <div class="game">
+        <div class="contents1">
+            <span id = "message">Press "SPACE" key to activate</span>
+        </div>
+        <div class="contents2">
+            <div class="pointer" id="pointer"><span class="fa fa-bullseye fa-5x"></span></div>
+            <!-- マス -->
+            <table id="gameBoard" class="gameBoard">
+                <!-- 1 -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- 2 -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- 3 -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- 4 -->
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <!-- 5 -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="contents3"> 
+            <!-- 文字列、ゲージ、スコアボード -->
+            <div class="colItems">
+                <div class="colItem">
+                    <div class="light"></div>
+                    <div class="colName">制限時間</div>
+                </div>
+                <!-- 制限時間 -->
+                <div id="timerLabel">30</div>
+            </div>
+            <div class="colItems">
+                <div class="colItem">
+                    <div class="light"></div>
+                    <div class="colName">ターゲット</div>
+                </div>
+                <div id="strTarget">???</div>
+            </div>
+            <div class="colItems">
+                <div class="colItem">
+                    <div class="light"></div>
+                    <div class="colName">MP</div>
+                </div>
+                <div class="powerItems">
+                    <div class="powerItem"></div>
+                    <div class="powerItem"></div>
+                    <div class="powerItem"></div>
+                    <div class="powerItem"></div>
+                    <div class="powerItem"></div>
+                </div>
+            </div>
+            <div class="colItems">
+                <div class="colItem">
+                    <div class="light"></div>
+                    <div class="colName">スコア</div>
+                </div>
+                <div class="scoreItem">
+                    <div class="player">PLAYER</div>
+                    <div class="score" id="playerScore">0</div>
+                </div>
+                <div class="scoreItem">
+                    <div class="player">CPU</div>
+                    <div class="score" id="cpuScore">0</div>
+                </div>
+                <div class="scoreItem accuracyItem" hidden>
+                    <div class="player">Accuracy</div>
+                    <div class="score" id="accuracyLabel">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="resultArea">
+            <div class="resultItem">Back To SELECT LEVEL</div>
+            
+        </div>
+    </div>
+    
+</main>
+    <footer>
+        <div>
+            Splite<br>a TakuyaShimura Production
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/player.js"></script>
+    <script src="./js/cpu.js"></script>
+</html>
